@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="BMS-BOOK:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>BMS-BOOK</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="BMS-BOOK-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="BMS-BOOK:war exploded" />
+    </root>
+  </artifact>
+</component>
