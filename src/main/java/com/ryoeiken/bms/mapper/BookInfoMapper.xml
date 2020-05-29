@@ -441,6 +441,10 @@
         where book_id = #{book.bookId}
     </update>
 
+    <update id="updateBookNum">
+        update book_info set num = #{num} where book_id = #{bookId}
+    </update>
+
     <select id="selectByExampleNew" resultMap="bookMap">
         select
         <include refid="book_column"/>

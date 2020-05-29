@@ -113,7 +113,15 @@ public class BookServiceImpl implements BookService {
 
     @Override
     public int deleteBook(Long bookId) {
-        return this.bookInfoMapper.deleteByPrimaryKey(bookId);
+        Book book = queryOne(bookId);
+        int updateCount = 0;
+        if (book.getNum() == 0 ){
+            updateCount = bookInfoMapper.deleteByPrimaryKey(bookId);
+        }else {
+            int num = book.getNum()-1;
+            updateCount = bookInfoMapper.updateBookNum(bookId,num);
+        }
+        return updateCount;
     }
 
     @Override

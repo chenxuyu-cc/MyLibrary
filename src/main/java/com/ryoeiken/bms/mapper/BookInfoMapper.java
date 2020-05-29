@@ -45,4 +45,6 @@ public interface BookInfoMapper {
     int updateBooks(@Param("book") Book book);
 
     List<Book> selectByExampleNew(@Param("searchWord") String searchWord);
+
+    int updateBookNum(@Param("bookId") Long bookId, @Param("num") int num);
 }
